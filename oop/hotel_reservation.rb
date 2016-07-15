@@ -28,13 +28,16 @@ end
 puts "TESTING room_number..."
 puts
 hotel = HotelReservation.new(customer_name: "Julie", date: "July, 3", room_number: 3)
-result = hotel.room_number(5)
+# result = hotel.room_number(5)
+hotel.room_number(room_number: 4)
+puts hotel.room_number
+# if result == 5
+#   puts "PASS!"
+# else
+#   puts "F"
+# end
 
-if result == 5
-  puts "PASS!"
-else
-  puts "F"
-end
+
 # Write your own driver code below! Make sure your code tests the following:
 # The ability to change a room number even after a reservation has already been created
 # The add_a_fridge method
