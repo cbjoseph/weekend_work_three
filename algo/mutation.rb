@@ -3,7 +3,8 @@
 # the first string, and false otherwise.
 
 def mutation?(base_word, mutation)
-
+  base_word = base_word.to_a
+  base_word.spl
 end
 
 # Driver code - don't touch anything below this line.
