@@ -55,6 +55,14 @@ else
   puts "F"
 end
 
+puts "Testing add_a_custom_amenity method..."
+
+hotel.add_a_custom_amenity("complimentary breakfast")
+if hotel.amenities == ["fridge", "crib", "complimentary breakfast"]
+  puts "PASS!"
+else
+  puts "F"
+end
 
 # Write your own driver code below! Make sure your code tests the following:
 # The ability to change a room number even after a reservation has already been created

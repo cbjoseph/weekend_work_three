@@ -11,14 +11,12 @@ def mutation?(base_word, mutation)
       match_mutation << letter
     end
   end
-  if match_mutation.uniq.sort == mutation.uniq.sort
+  if match_mutation.uniq == mutation.uniq
     true
   else 
-   false
+    false
   end
 end
-
-
 
 # Driver code - don't touch anything below this line.
 puts "TESTING mutation?..."
