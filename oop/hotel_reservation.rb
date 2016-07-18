@@ -28,14 +28,32 @@ end
 puts "TESTING room_number..."
 puts
 hotel = HotelReservation.new(customer_name: "Julie", date: "July, 3", room_number: 3)
-# result = hotel.room_number(5)
-hotel.room_number(room_number: 4)
-puts hotel.room_number
-# if result == 5
-#   puts "PASS!"
-# else
-#   puts "F"
-# end
+
+hotel.room_number = 4
+result = hotel.room_number
+if result == 4
+  puts "PASS!"
+else
+  puts "F"
+end
+
+puts "Testing add_a_fridge method..."
+
+hotel.add_a_fridge
+if hotel.amenities == ["fridge"]
+  puts "PASS!"
+else
+  puts "F"
+end
+
+puts "Testing add_a_crib method..."
+
+hotel.add_a_crib
+if hotel.amenities == ["fridge", "crib"]
+  puts "PASS!"
+else
+  puts "F"
+end
 
 
 # Write your own driver code below! Make sure your code tests the following:

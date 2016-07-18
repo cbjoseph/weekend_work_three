@@ -5,51 +5,45 @@
 def mutation?(base_word, mutation)
   base_word = base_word.split(//)
   mutation = mutation.split(//)
+  match_mutation = []
   mutation.each do |letter|
     if base_word.include?(letter) == true
-      mutation.delete(letter)
-    else
-      p false
+      match_mutation << letter
     end
-    # if mutation.empty?
-    #   p true
-    # end
   end
-p base_word
-p mutation
-  # if base_word.include?(mutation)
-  #   p true
-  # else
-  #   p false
-  # end
+  if match_mutation.uniq.sort == mutation.uniq.sort
+    true
+  else 
+   false
+  end
 end
+
+
+
+# Driver code - don't touch anything below this line.
+puts "TESTING mutation?..."
+puts
 
 result = mutation?("burly", "ruby")
 
-# Driver code - don't touch anything below this line.
-# puts "TESTING mutation?..."
-# puts
+puts "Your method returned:"
+puts result
+puts
 
-# result = mutation?("burly", "ruby")
+if result == true
+  puts "PASS!"
+else
+  puts "F"
+end
 
-# puts "Your method returned:"
-# puts result
-# puts
+result = mutation?("burly", "python")
 
-# if result == true
-#   puts "PASS!"
-# else
-#   puts "F"
-# end
+puts "Your method returned:"
+puts result
+puts
 
-# result = mutation?("burly", "python")
-
-# puts "Your method returned:"
-# puts result
-# puts
-
-# if result == false
-#   puts "PASS!"
-# else
-#   puts "F"
-# end
+if result == false
+  puts "PASS!"
+else
+  puts "F"
+end
